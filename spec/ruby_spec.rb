@@ -37,40 +37,39 @@ describe 'the Friday test :)' do
     expect(every_possible_pairing_of_students(n)).to eq [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
   end
 
-  xit 'all_elements_except_first_3' do
-    n = all_elements_except_first_3 [1, 2, 3, 4, 5, 6, 7]
-    expect(n).to eq [4, 5, 6, 7]
+  it 'all_elements_except_first_3' do
+    n = [1, 2, 3, 4, 5, 6, 7]
+    expect(all_elements_except_first_3(n)).to eq [4, 5, 6, 7]
   end
 
-  xit 'add_element_to_beginning_of_array' do
-    n = add_element_to_beginning_of_array [2, 3, 4, 5], 1
-    expect(n).to eq [1, 2, 3, 4, 5]
+  it 'add_element_to_beginning_of_array' do
+    expect(add_element_to_beginning_of_array([2, 3, 4, 5], 1)).to eq [1, 2, 3, 4, 5]
   end
 
-  xit 'array_sort_by_last_letter_of_word' do
-    n = array_sort_by_last_letter_of_word ['sky', 'puma', 'maker']
-    expect(n).to eq ['puma', 'maker', 'sky']
+  it 'array_sort_by_last_letter_of_word' do
+    n = ['sky', 'puma', 'maker']
+    expect(array_sort_by_last_letter_of_word(n)).to eq ['puma', 'maker', 'sky']
   end
 
-  xit 'get_first_half_of_string' do
-    a = get_first_half_of_string 'banana'
-    b = get_first_half_of_string 'apple'
+  it 'get_first_half_of_string' do
+    a = 'banana'
+    b = 'apple'
 
-    expect(a).to eq 'ban'
-    expect(b).to eq 'app'
+    expect(get_first_half_of_string(a)).to eq 'ban'
+    expect(get_first_half_of_string(b)).to eq 'app'
   end
 
-  xit 'make_numbers_negative' do
-    a = make_numbers_negative 5
-    b = make_numbers_negative -7
+  it 'make_numbers_negative' do
+    a = 5
+    b = -7
 
-    expect(a).to eq -5
-    expect(b).to eq -7
+    expect(make_numbers_negative(a)).to eq -5
+    expect(make_numbers_negative(b)).to eq -7
   end
 
-  xit 'separate_array_into_even_and_odd_numbers' do
-    n = separate_array_into_even_and_odd_numbers [1, 2, 3, 4, 5, 6, 7]
-    expect(n).to eq [[2, 4, 6], [1, 3, 5, 7]]
+  it 'separate_array_into_even_and_odd_numbers' do
+    n = [1, 2, 3, 4, 5, 6, 7]
+    expect(separate_array_into_even_and_odd_numbers(n)).to eq [[2, 4, 6], [1, 3, 5, 7]]
   end
 
   xit 'number_of_elements_that_are_palindromes' do
