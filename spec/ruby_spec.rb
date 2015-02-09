@@ -12,31 +12,29 @@ describe 'the Friday test :)' do
     expect(select_elements_starting_with_a(n)).to eq ['apples', 'avocados']
   end
 
-  xit 'select_elements_starting_with_vowel' do
-    n = select_elements_starting_with_vowel ['john', 'david', 'omar', 'fred', 'idris', 'angela']
-    expect(n).to eq ['omar', 'idris', 'angela']
+  it 'select_elements_starting_with_vowel' do
+    n = ['john', 'david', 'omar', 'fred', 'idris', 'angela']
+    expect(select_elements_starting_with_vowel (n)).to eq ['omar', 'idris', 'angela']
   end
 
-  xit 'remove_nils_from_array' do
-    n = remove_nils_from_array ['a', 'b', nil, nil, false, 'c', nil]
-    expect(n).to eq ['a', 'b', false, 'c']
+  it 'remove_nils_from_array' do
+    n = ['a', 'b', nil, nil, false, 'c', nil]
+    expect(remove_nils_from_array(n)).to eq ['a', 'b', false, 'c']
   end
 
-  xit 'remove_nils_and_false_from_array' do
-    n = remove_nils_and_false_from_array ['a', 'b', nil, nil, false, 'c', nil]
-    expect(n).to eq ['a', 'b', 'c']
+  it 'remove_nils_and_false_from_array' do
+    n = ['a', 'b', nil, nil, false, 'c', nil]
+    expect(remove_nils_and_false_from_array (n)).to eq ['a', 'b', 'c']
   end
 
-  xit 'reverse_every_element_in_array' do
-    n = reverse_every_element_in_array ['dog', 'monkey', 'elephant']
-    expect(n).to eq ['god', 'yeknom', 'tnahpele']
+  it 'reverse_every_element_in_array' do
+    n =['dog', 'monkey', 'elephant']
+    expect(reverse_every_element_in_array(n)).to eq ['god', 'yeknom', 'tnahpele']
   end
 
-  xit 'every_possible_pairing_of_students' do
-    n = every_possible_pairing_of_students(['Bob', 'Dave', 'Clive']) || []
-    sorted = n.map {|pair| pair.sort}.sort_by {|pair| [pair.first, pair.last] }
-
-    expect(sorted).to eq [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
+  it 'every_possible_pairing_of_students' do
+    n = ['Bob', 'Clive', 'Dave' ]
+    expect(every_possible_pairing_of_students(n)).to eq [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
   end
 
   xit 'all_elements_except_first_3' do
