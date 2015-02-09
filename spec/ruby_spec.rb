@@ -7,9 +7,9 @@ end
 
 describe 'the Friday test :)' do
   
-  xit 'select_elements_starting_with_a' do
-    n = select_elements_starting_with_a ['bananas', 'apples', 'pears', 'avocados']
-    expect(n).to eq ['apples', 'avocados']
+  it 'select_elements_starting_with_a' do
+    n = ['bananas', 'apples', 'pears', 'avocados']
+    expect(select_elements_starting_with_a(n)).to eq ['apples', 'avocados']
   end
 
   xit 'select_elements_starting_with_vowel' do
