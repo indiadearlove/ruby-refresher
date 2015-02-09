@@ -55,6 +55,12 @@ def separate_array_into_even_and_odd_numbers(n)
   x = [even, odd]
 end
 
+def number_of_elements_that_are_palindromes(n)
+  total = 0
+  n.each { |word| (word == word.reverse ? (total = total + 1) : (total) )}
+  total
+end
+
 
 
 
